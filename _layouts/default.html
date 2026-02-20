@@ -62,7 +62,7 @@
           <h2 class="mb-2">Webcomics</h2>
           <div>
             {% assign posts = site.posts | where: "project", "the_perfect_childhood" %}
-            <a class="btn" href="{{ posts[0].url | absolute_url }}">
+            <a class="btn" href="{{ posts[-1].url | absolute_url }}">
               <div class="grid-title-desc center-content gap-3 bg-h shadow-m padding-3 mb-3 radius-2">
                 <h3>The Perfect Childhood</h3>
                 <p>Explore traumatic experiences from a child's perspective</p>
