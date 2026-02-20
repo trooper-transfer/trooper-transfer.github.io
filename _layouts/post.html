@@ -51,7 +51,8 @@
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>-->
 
-    {% for post in {{site.posts | where:"tags","the_perfect_chilhood"}} %}
+    {% for post in {{site.posts | where:"tags",page.tags}} %}
+      <h1>Fuck you</h1>
       <h2>{{ post.tags }}</h2>
       <h2>{{ post.id }}</h2>
     {% endfor %}
