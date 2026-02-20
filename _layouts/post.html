@@ -51,9 +51,9 @@
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>-->
 
-    <h1>{{ page.tags | inspect }}</h1>
+    <h1>{{ page.project | inspect }}</h1>
     {% for tag in site.tags %}
-      {% if tag[0] == page.tags %}
+      {% if tag[0] == page.project %}
       <h1>{{ tag | inspect }}</h1>
       {% endif %}
     {% endfor %}
