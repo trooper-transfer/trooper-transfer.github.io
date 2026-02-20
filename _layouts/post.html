@@ -54,7 +54,7 @@
     {% for tag in site.tags %}
       {% if tag[0] = page.tags %}
       <h1>{{ tag | inspect }}</h1>
-      {% endfor %}
+      {% endif %}
     {% endfor %}
     
     <div id="comicpage" class="flex full-screen fixed-tl-nopad padding-1 padding-3-mobile gap-3 z-2 bg-transparent">
