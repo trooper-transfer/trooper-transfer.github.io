@@ -65,8 +65,8 @@
       <a href="{{ site.url }}"><h3 class="max-height-52 center-y-self right-text px-2 pointer">close</h3></a>
       <img id="comicpage-img" class="contain-y comicpage-img center-self radius-2" src="https://drive.google.com/uc?export=view&id=1bc-QbAjRQY0nmlxfgBtiV8iZCZ68EPmN">
       <div class="max-height-52 bg-m radius-1 shadow-l grid cols-5 px-2 txt-light-children">
-        {% for post in posts linit:5 %}
-          <a class="flex">{{ forloop.index }}</a>
+        {% for post in posts linit:8 reversed %}
+          <a class="flex" href="{{ post.url | absolute_url }}"><p>{{ forloop.index }}</p></a>
         {% endfor %}
         <!--
         <a class="flex">
