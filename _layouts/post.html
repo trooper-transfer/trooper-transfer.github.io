@@ -52,7 +52,7 @@
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>-->
 
     {% for tag in site.tags %}
-      {% if tag[0] = page.tags %}
+      {% if tag[0] == page.tags %}
       <h1>{{ tag | inspect }}</h1>
       {% endif %}
     {% endfor %}
