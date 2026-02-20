@@ -51,9 +51,9 @@
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>-->
 
-    <h2>{{ site.posts | inspect }}</h2>
     {% for post in site.posts %}
-      <h2>{{ post.name }}</h2>
+      <h2>{{ post.tags }}</h2>
+      <h2>{{ post.id }}</h2>
     {% endfor %}
     
     <div id="comicpage" class="flex full-screen fixed-tl-nopad padding-1 padding-3-mobile gap-3 z-2 bg-transparent">
