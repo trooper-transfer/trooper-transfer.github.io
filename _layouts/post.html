@@ -51,15 +51,9 @@
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>-->
 
-    {% assign tag_index = -1 %}
-    
-    {% for tag in site.tags %}
-      {% if tag[0] == page.project %}
-        {% assign tag_index = {{ forloop.index }} %}
-      {% endif %}
-    {% endfor %}
+    {% assign posts = site.posts | where: "project", page.project %}
 
-    <h1>{{ tag_index }}</h1>
+    <h1>{{ posts | inspect }}</h1>
     
     <div id="comicpage" class="flex full-screen fixed-tl-nopad padding-1 padding-3-mobile gap-3 z-2 bg-transparent">
       <a href="{{ site.url }}"><h3 class="max-height-52 center-y-self right-text px-2 pointer">close</h3></a>
