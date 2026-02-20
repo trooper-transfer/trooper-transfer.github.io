@@ -5,8 +5,3 @@ show_downloads: true
 url: https://trooper-transfer.github.io
 #google_analytics:
 #theme: jekyll-theme-minimal
-
-collections:
-  - the_perfect_childhood
-
-collections_dir: collections
