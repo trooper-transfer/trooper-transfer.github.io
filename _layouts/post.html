@@ -65,21 +65,17 @@
       <a href="{{ site.url }}"><h3 class="max-height-52 center-y-self right-text px-2 pointer">close</h3></a>
       <img id="comicpage-img" class="contain-y comicpage-img center-self radius-2" src="https://drive.google.com/uc?export=view&id=1bc-QbAjRQY0nmlxfgBtiV8iZCZ68EPmN">
       <div class="max-height-52 bg-m radius-1 shadow-l grid cols-5 px-2 txt-light-children">
-        <a class="flex" href="{{ posts[-1].url }}">
+        {% for post in posts linit:5 %}
+          <a class="flex">{{ forloop.index }}</a>
+        {% endfor %}
+        <!--
+        <a class="flex">
           <svg class="contain-svg padding-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
             <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160zm352-160l-160 160c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L269.3 256 406.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0z" />
           </svg>
         </a>
-
-        {% if curr_index < -1 %}
-          {% assign prev_index = curr_index + 1 %}
-          <a class="flex" href="{{ posts[prev_index].url | absolute_url }}">
-        {% else %}
-          <a class="flex">
-        {% endif  %}
+        <a class="flex">
           <svg class="contain-svg padding-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-            <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
             <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
           </svg>
         </a>
@@ -89,16 +85,15 @@
         </div>
         <a class="flex">
           <svg class="contain-svg padding-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
-            <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
             <path d="M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
           </svg>
         </a>
         <a class="flex">
           <svg class="contain-svg padding-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-            <!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
             <path d="M439.1 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L371.2 256 233.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160zm-352 160l160-160c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L179.2 256 41.9 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0z" />
           </svg>
         </a>
+        -->
       </div>
     </div>
     
