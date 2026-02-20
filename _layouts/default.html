@@ -61,7 +61,7 @@
         <div class="full-width bg-m shadow-l padding-2 radius-1">
           <h2 class="mb-2">Webcomics</h2>
           <div>
-            <a class="btn" href="{% post_url 2026-02-20-page-1 %}">
+            <a class="btn" href='{% post_url {{ site.posts | where: "project", "the_perfect_childhood" | first }} %}'>
               <div class="grid-title-desc center-content gap-3 bg-h shadow-m padding-3 mb-3 radius-2">
                 <h3>The Perfect Childhood</h3>
                 <p>Explore traumatic experiences from a child's perspective</p>
