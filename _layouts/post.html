@@ -87,8 +87,8 @@
           </svg>
         </a>
         <div class="grid cols-2 py-3">
-          <input class="bg-l shadow-inv-s width-100 center-text" type="number" name="current-page" placeholder="1">
-          <p class="center-self">of 8</p>
+          <input class="bg-l shadow-inv-s width-100 center-text" type="number" name="current-page" placeholder="1" value="{{ curr_index | plus: 1}}" onchange="change_page()">
+          <p class="center-self">of {{ posts.size }}</p>
         </div>
         <a class="flex" href="{{ posts[next_index].url | absolute_path }}">
           <svg class="contain-svg padding-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
