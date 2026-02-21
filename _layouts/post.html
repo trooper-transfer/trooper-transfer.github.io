@@ -60,6 +60,11 @@
         {% break %}
       {% endif %}
     {% endfor %}
+
+    {% assign prev_index = curr_index %}
+    {% if curr_index > 0 %}
+      {% assign prev_index = curr_index - 1 %}
+    {% endif %}
     
     <div id="comicpage" class="flex full-screen fixed-tl-nopad padding-1 padding-3-mobile gap-3 z-2 bg-transparent">
       <a href="{{ site.url }}"><h3 class="max-height-52 center-y-self right-text px-2 pointer">close</h3></a>
@@ -70,8 +75,7 @@
             <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160zm352-160l-160 160c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L269.3 256 406.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0z" />
           </svg>
         </a>
-
-        <a class="flex" {% if curr_index > 0 %}href="{{ posts[curr_index-1].url | absolute_path }}"{% endif %}>
+        <a class="flex" href="{{ posts[prev_index].url | absolute_path }}">
           <svg class="contain-svg padding-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
             <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
           </svg>
