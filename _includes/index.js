@@ -1,5 +1,5 @@
-function change_page(event)
+function change_page(newPage)
 {
-    console.log(event.target.value);
+    console.log(newPage);
     console.log("{{ curr_index }}");
 }
