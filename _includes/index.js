@@ -1,4 +1,5 @@
 const pages = {{ posts | map: "url" | jsonify }};
+const baseUrl = "{{ site.url }}";
 
 function change_page(newPage)
 {
