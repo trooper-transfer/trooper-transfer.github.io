@@ -1,5 +1,6 @@
 function change_page(newPage)
 {
-    console.log(newPage);
-    console.log("{{ curr_index }}");
+    const requestedIndex = min(max(newPage - 1, 0), {{ last_index }});
+    console.log(requestedIndex);
+    console.log("{{ curr_page }}");
 }

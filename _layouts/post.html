@@ -60,6 +60,7 @@
         {% break %}
       {% endif %}
     {% endfor %}
+    {% assign curr_page = curr_index | plus: 1 %}
 
     {% assign prev_index = curr_index %}
     {% if curr_index > 0 %}
@@ -87,7 +88,7 @@
           </svg>
         </a>
         <div class="grid cols-2 py-3">
-          <input class="bg-l shadow-inv-s width-100 center-text" type="number" name="current-page" placeholder="1" value="{{ curr_index | plus: 1}}" onchange="change_page(this.value)">
+          <input class="bg-l shadow-inv-s width-100 center-text" type="number" name="current-page" placeholder="1" value="{{ curr_page }}" onchange="change_page(this.value)">
           <p class="center-self">of {{ posts.size }}</p>
         </div>
         <a class="flex" href="{{ posts[next_index].url | absolute_path }}">
