@@ -4,5 +4,6 @@ const baseUrl = "{{ site.url }}";
 function change_page(newPage)
 {
     const requestedIndex = Math.min(Math.max(newPage - 1, 0), 2);
-    window.Location.href = pages[requestedIndex];
+    console.log(baseUrl + pages[requestedIndex]);
+    window.Location.href = baseUrl + pages[requestedIndex];
 }
