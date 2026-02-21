@@ -66,7 +66,10 @@
       {% assign prev_index = curr_index | minus: 1 %}
     {% endif %}
 
-    <h1>{{ prev_index }}</h1>
+    {% assign next_index = curr_index %}
+    {% if curr_index > 0 %}
+      {% assign next_index = curr_index | plus: 1 %}
+    {% endif %}
     
     <div id="comicpage" class="flex full-screen fixed-tl-nopad padding-1 padding-3-mobile gap-3 z-2 bg-transparent">
       <a href="{{ site.url }}"><h3 class="max-height-52 center-y-self right-text px-2 pointer">close</h3></a>
@@ -86,7 +89,7 @@
           <input class="bg-l shadow-inv-s width-100 center-text" type="number" name="current-page" placeholder="1">
           <p class="center-self">of 8</p>
         </div>
-        <a class="flex">
+        <a class="flex" href="{{ posts[next_index].url | absolute_path }}">
           <svg class="contain-svg padding-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512">
             <path d="M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z" />
           </svg>
