@@ -1,4 +1,4 @@
-const pages_json = "{{ posts | jsonify }}";
+const pages_json = "{{ posts }}";
 
 function change_page(newPage)
 {
