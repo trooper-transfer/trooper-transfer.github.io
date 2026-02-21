@@ -67,7 +67,7 @@
     {% endif %}
 
     {% assign next_index = curr_index %}
-    {% if curr_index > 0 %}
+    {% if curr_index < {{ posts.size | minus: 1 }} %}
       {% assign next_index = curr_index | plus: 1 %}
     {% endif %}
     
@@ -103,5 +103,7 @@
     </div>
     
     <p class="center-text my-1 sticky-bottom">Copyright &copy; 2026 Trooper Transfer</p>
+  
+    <script src="{{ "/assets/js/index.js?v=" | append: site.github.build_revision | relative_url }}"></script>
   </body>
 </html>
