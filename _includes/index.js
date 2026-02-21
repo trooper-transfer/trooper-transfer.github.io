@@ -1,4 +1,4 @@
-const pages_json = "{{ posts }}";
+const pages_json = "{{ posts | map: "url" }}";
 
 function change_page(newPage)
 {
