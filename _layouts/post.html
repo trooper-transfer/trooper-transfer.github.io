@@ -34,7 +34,7 @@
     
     <div id="comicpage" class="flex full-screen fixed-tl-nopad padding-1 padding-3-mobile gap-3 z-2 bg-transparent">
       <a href="{{ site.url }}"><h3 class="max-height-52 center-y-self right-text px-2 pointer">close</h3></a>
-      <img id="comicpage-img" class="contain-y comicpage-img center-self radius-2" src="{{ page.img }}">
+      <img id="comicpage-img" class="contain-y comicpage-img center-self radius-2" src="{{ page.img | relative_url }}">
       <div class="max-height-52 bg-m radius-1 shadow-l grid cols-5 px-2 txt-light-children">
         <a class="flex" href="{{ posts[0].url | absolute_url }}">
           <svg class="contain-svg padding-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
