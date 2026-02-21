@@ -71,8 +71,6 @@
     {% if curr_index < last_index %}
       {% assign next_index = curr_index | plus: 1 %}
     {% endif %}
-
-    <h1>{{ last_index }}</h1>
     
     <div id="comicpage" class="flex full-screen fixed-tl-nopad padding-1 padding-3-mobile gap-3 z-2 bg-transparent">
       <a href="{{ site.url }}"><h3 class="max-height-52 center-y-self right-text px-2 pointer">close</h3></a>

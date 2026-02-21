@@ -1,1 +1,5 @@
-console.log("loaded");
+---
+---
+
+
+console.log("{{ curr_index }}");
