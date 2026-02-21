@@ -61,12 +61,12 @@
       {% endif %}
     {% endfor %}
 
-    <h1>{{ curr_index }}</h1>
-
     {% assign prev_index = curr_index %}
     {% if curr_index > 0 %}
-      {% assign prev_index = curr_index - 1 %}
+      {% assign prev_index = curr_index | minus: 1 %}
     {% endif %}
+
+    <h1>{{ prev_index }}</h1>
     
     <div id="comicpage" class="flex full-screen fixed-tl-nopad padding-1 padding-3-mobile gap-3 z-2 bg-transparent">
       <a href="{{ site.url }}"><h3 class="max-height-52 center-y-self right-text px-2 pointer">close</h3></a>
